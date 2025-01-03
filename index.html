@@ -10,7 +10,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="style.css" />
-        <script src="cases.js"></script>
+        <script src="cases.min.js"></script>
         <script src="script.js"></script>
     </head>
 
@@ -31,7 +31,7 @@
                 <br>
                 opinions: 1791–2013
                 <br>
-                dockets: 1986–1995 
+                dockets: 1971–1995 
                 <br>
                 cert cases only
                 <br>
@@ -40,15 +40,21 @@
 
 
             <h3>
-            <label for="case-search">search by case name:</label>
+            <label for="case-search">case name:</label>
             <br>
-            <input type="search" id="case-search" oninput="updateSearchResults(this.value)"/>
+            <input type="search" id="case-search" oninput="updateSearchResults()"/>
             </h3>
 
             <h3>
-                <label for="cite-search">search by cite:</label>
+                <label for="cite-search">cite:</label>
                 <br>
-                <input type="number" class="cite" id="vol" oninput="searchByCite()"/> U.S. <input type="number" class="cite" id="page" oninput="searchByCite()"/> 
+                <input type="number" class="cite" id="vol" oninput="updateSearchResults()"/> U.S. <input type="number" class="cite" id="page" oninput="updateSearchResults()"/> 
+            </h3>
+
+            <h3>
+                <label for="cite-search">year of decision:</label>
+                <br>
+                <input type="number" class="year" id="min-year" min="1791" max="2013" oninput="updateSearchResults()" value="1791"/> – <input type="number" class="year" id="max-year" min="1791" max="2013" value="2013" oninput="updateSearchResults()"/> 
             </h3>
         </div>
         </div>

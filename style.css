@@ -7,7 +7,7 @@ html, body {
 
 
 h1 {
-    font-size: 10vh;
+    font-size: 10.1vh;
     font-weight: 700;
     line-height: 0.8;
     margin:0;
@@ -44,6 +44,12 @@ input {
 
 .cite {
     width: 12.6vh;
+    text-align: center;
+    font-weight: 700;
+}
+
+.year {
+    width: 15.3vh;
     text-align: center;
     font-weight: 700;
 }
