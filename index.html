@@ -5,40 +5,61 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <meta name="description" content="supreme court docket sheets" />
-        <title>supreme court docket sheets</title>
+        <title>scotus docket sheets</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="style.css" />
+        <script src="cases.js"></script>
+        <script src="script.js"></script>
     </head>
 
     <body>
-        <h1>
-            scotus
-            <br>
-            docket
-            <br>
-            sheets
-        </h1>
+        <div class ="container">
+        <div class="left">
+            <div class ="panel">
+            <h1>
+                scotus
+                <br>
+                docket
+                <br>
+                sheets
+            </h1>
 
-        <h2>
-            --------------------
+            <h2>
+                --------------------
+                <br>
+                opinions: 1791–2013
+                <br>
+                dockets: 1986–1995 
+                <br>
+                cert cases only
+                <br>
+                --------------------
+            </h2>
+
+
+            <h3>
+            <label for="case-search">search by case name:</label>
             <br>
-            COVERAGE: 1955-1995, 
-            <br>
-            granted review
-            <br>
-            --------------------
-        </h2>
+            <input type="search" id="case-search" oninput="updateSearchResults(this.value)"/>
+            </h3>
 
+            <h3>
+                <label for="cite-search">search by cite:</label>
+                <br>
+                <input type="number" class="cite" id="vol" oninput="searchByCite()"/> U.S. <input type="number" class="cite" id="page" oninput="searchByCite()"/> 
+            </h3>
+        </div>
+        </div>
 
-        <h3>
-        <label for="site-search">Search by case name:</label>
-        <br>
-        <input type="search" id="site-search" name="q" />
-        </h3>
-
-        <br>
-        <img src="https://s3.amazonaws.com/NARAprodstorage/lz/dc-metro/rg-267/1524561/1524561-M2116-035/1524561-M2116-035-0031.jpg">
-
+        <div class="right">
+            <div class = "results">
+                <div id = "cases">
+                    <!--<p>BECKLEY NEWSPAPERS CORP. v. HANKS (1967) <a>[PDF]</a></p>
+                    <img src="https://s3.amazonaws.com/NARAprodstorage/lz/dc-metro/rg-267/1524561/1524561-M2116-035/1524561-M2116-035-0031.jpg">-->
+                </div>
+            </div>
+        </div>
+    </div>
     </body>
