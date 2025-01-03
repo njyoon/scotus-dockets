@@ -56,7 +56,7 @@ function updateSearchResults(keyword) {
 
                         caseList.push(element.case + '<br>' + element.cite + ' (' + element.year + ')' + ' <a href="https://tile.loc.gov/storage-services/service/ll/usrep/usrep'+ volNum + '/usrep' + volNum + pageNum + '/usrep' + volNum + pageNum + '.pdf" download target="_blank">[Op.]</a>' + dkt);
 
-                        if (caseList.length < 4 && element.images) {
+                        if (element.images) {
                             var i = '';
 
 
@@ -84,7 +84,7 @@ function updateSearchResults(keyword) {
         document.getElementById('cases').innerHTML += '<p>' + e + '</p>';
     });
 
-    if (caseList.length > 99) {
+    if (caseList.length > 49) {
         document.getElementById('cases').innerHTML += '<p>...</p>';
     }
 
