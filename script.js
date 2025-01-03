@@ -125,6 +125,8 @@ function searchByCite() {
 function updateSearchResults(keyword) {
 
     document.getElementById('cases').innerHTML = '';
+    document.getElementById('vol').value = '';
+    document.getElementById('page').value = '';
 
     if (keyword.length == 0) {
         return;
